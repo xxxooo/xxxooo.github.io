@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Oview index test</title>
+	<style type="text/css">
+	body {
+		background: #f0f0f0;
+		margin: 0;
+	}
+
+	h1 {
+		margin: auto;
+		text-align: center;
+	}
+
+	.c0{
+		width:1012px;
+		margin:auto;
+		background: #f4fff4;
+	}
+
+	.c1{
+		background: #c6c6c6;
+		padding: 1px 0 0 1px;
+	}
+
+	.c2 {
+		background: #fdfdfd;
+		width: 336px;
+		height: 336px;
+		margin: 0 1px 1px 0;
+		float: left;
+		overflow: hidden;
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	.v1 {
+		display: block;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+	}
+	</style>
+</head>
+
+<body>
+	<div class="c0">
+		<h1>this is titile</h1>
+		<p>123123123</p>
+		<div id="pack" class="c1">
+			<div class="c2">
+				<div class="v1">
+					<h1>123</h1>
+				</div>
+			</div>
+		</div>
+		<div>456465456</div>
+	</div>
+
+	<script>
+		var name_list = ["dpre02", "dpre05", "dpre06", "dpre07", "dpre02", "dpre05", "dpre06", "dpre07"],
+			ov = [],
+			vid = [];
+		var pack = document.getElementById("pack");
+		for (var i = 0; i < name_list.length; i++) {
+			ov[i] = document.createElement("div"),
+			vid[i] = document.createElement("video");
+			ov[i].className = "c2"
+			ov[i].appendChild(vid[i]);
+			vid[i].src = "./photo/" + name_list[i] + "/" + name_list[i] + "_m300.mp4";
+			vid[i].setAttribute("poster", "./photo/" + name_list[i] + "/" + name_list[i] + "_p300.jpg");
+			vid[i].preload = "auto";
+			vid[i].loop = true;
+			vid[i].className = "v1";
+			pack.appendChild(ov[i]);
+
+			ov[i].addEventListener("mouseover", function(){
+				this.getElementsByTagName("video")[0].play();
+			});
+			ov[i].addEventListener("mouseout", function(){
+				this.getElementsByTagName("video")[0].pause();
+			});
+
+		};
+		var clear_div = document.createElement("div");
+		clear_div.className = "clear";
+		pack.appendChild(clear_div);
+	</script>
+</body>
+</html>
