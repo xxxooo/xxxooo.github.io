@@ -1,0 +1,125 @@
+.container {
+	text-align: center;
+	margin: 40px auto;
+}
+
+.background {
+	background-image: url("../img/background@2x.jpg");
+	width: 750px;
+	height: 1334px;
+	position: relative;
+	margin: auto;
+}
+
+.background > div {
+	position: absolute;
+	background-size: 100%;
+}
+
+.clickable {
+	cursor:pointer;
+}
+.clickable:active {
+	transform: translateY(4px);
+}
+
+.header {
+	background-image: url("../img/header@2x.png");
+	width: 750px;
+	height: 40px;
+}
+
+.main_logo_a {
+	background-image: url("../img/main_logo_a@2x.png");
+	width: 204px;
+	height: 224px;
+	left: 76px;
+	top: 82px;
+}
+
+.main_logo_b {
+	background-image: url("../img/main_logo_b@2x.png");
+	width: 250px;
+	height: 224px;
+	left: 56px;
+	top: 82px;
+	display: none;
+	animation:pre_swing 1s ease-in-out 0s 1, swing 4s ease-in-out 1s infinite;
+}
+@keyframes pre_swing {
+	100% { transform: rotate(15deg); }
+}
+@keyframes swing {
+	0% { transform: rotate(15deg); }
+	50% { transform: rotate(-15deg); }
+	100% { transform: rotate(15deg); }
+}
+
+.main_logo_t {
+	background-image: url("../img/main_logo_t.png");
+	width: 380px;
+	height: 246px;
+	left: 316px;
+	top: 80px;
+}
+
+.play_btn {
+	background-image: url("../img/play_btn_play@2x.png");
+	width: 208px;
+	height: 208px;
+	left: 272px;
+	top: 370px;
+}
+
+.play_btn.play_btn_pause {
+	background-image: url("../img/play_btn_pause@2x.png");
+}
+
+.play_circle {
+	background-image: url("../img/play_circle@2x.png");
+	width: 184px;
+	height: 184px;
+	left: 284px;
+	top: 372px;
+	display: none;
+	animation:spin 12s linear infinite;
+}
+@keyframes spin {
+	100% { transform:rotate(360deg); }
+}
+
+.functions {
+	width: 100%;
+	top: 618px;
+}
+
+.functions > div {
+	display: inline-block;
+	background-size: 100%;
+	width: 108px;
+	height: 108px;
+	margin: 6px;
+}
+
+.f_list {
+	background-image: url("../img/function_list@2x.png");
+}
+.f_line {
+	background-image: url("../img/function_line@2x.png");
+}
+.f_fb {
+	background-image: url("../img/function_fb@2x.png");
+}
+.f_share {
+	background-image: url("../img/function_share@2x.png");
+}
+.f_phonecall {
+	background-image: url("../img/function_phonecall@2x.png");
+}
+
+.cm_area {
+	background-image: url("../img/cm_area@2x.jpg");
+	width: 750px;
+	height: 500px;
+	bottom: 0px;
+}

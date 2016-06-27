@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/b626.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+function clickSwitch() {
+	$('.main_logo_b').fadeToggle();
+	$('.main_logo_a').fadeToggle();
+	$('.play_circle').fadeToggle("slow");
+	$(this).toggleClass('play_btn_pause');
+}
+
+$(document).ready(function(){
+    $('.play_btn').click(clickSwitch);
+});
+</script>
+</head>
+<body>
+
+<div class="container">
+	<h1>APP UI DEMO</h1>
+	<div class="background">
+		<div class="header"></div>
+		<div class="main_logo_a"></div>
+		<div class="main_logo_b"></div>
+		<div class="main_logo_t"></div>
+		<div class="play_circle"></div>
+		<div class="play_btn clickable"></div>
+		<div class="functions">
+			<div class="f_list clickable"></div>
+			<div class="f_line clickable"></div>
+			<div class="f_fb clickable"></div>
+			<div class="f_share clickable"></div>
+			<div class="f_phonecall clickable"></div>
+		</div>
+		<div class="cm_area"></div>
+	</div>
+</div>
+
+</body>
+</html>
