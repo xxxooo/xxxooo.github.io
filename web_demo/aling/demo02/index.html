@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="theme-color" content="#8CC000">
+<meta name="viewport" content="width=750, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="../css/b627.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+<script>
+function clickSwitch() {
+	$('.main_logo_b').fadeToggle();
+	$('.main_logo_a').fadeToggle();
+	$('.play_circle').fadeToggle("slow");
+	$(this).toggleClass('play_btn_pause');
+}
+
+$(document).ready(function(){
+    $('.play_btn').click(clickSwitch);
+});
+</script>
+</head>
+<body>
+
+<div class="container">
+	<div class="header"></div>
+	<div class="main_logo_a"></div>
+	<div class="main_logo_b"></div>
+	<div class="main_logo_t"></div>
+	<div class="play_circle"></div>
+	<div class="play_btn clickable"></div>
+	<div class="functions">
+		<a class="f_list clickable"></a>
+		<a class="f_line clickable"></a>
+		<a class="f_fb clickable"></a>
+		<a class="f_share clickable"></a>
+		<a class="f_mail clickable"></a>
+		<a class="f_call clickable"></a>
+	</div>
+	<div class="cm_area"></div>
+</div>
+
+<embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org" autoplay="yes" loop="no" width="300" height="200" target="mms://127.0.0.1:554/video" />
+
+</body>
+</html>
