@@ -11,7 +11,7 @@ function setTimeData(callback) {
 
     var list = [];
     for (var i = 0; i < 72; i++) {
-        list.unshift( datetime.toString('yyyy-MM-dd-HH-mm') );
+        list.unshift( dateFormat(datetime, 'yyyy-mm-dd-HH-MM'));
         datetime = addMinutes(datetime, -10);
     }
     callback(list);
