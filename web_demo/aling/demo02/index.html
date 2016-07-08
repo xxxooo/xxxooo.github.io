@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="../css/b627.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+<script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-73286291-2","auto"),ga("send","pageview");</script>
 <script>
 function clickSwitch() {
 	$('.main_logo_b').fadeToggle();
@@ -38,6 +39,16 @@ $(document).ready(function(){
 	</div>
 	<div class="cm_area"></div>
 </div>
+
+<object id="MediaPlayer" width="192" height="190" type="audio/x-ms-wma">
+<param name="FileName"value="videofilename.wmv">
+<param name="autostart" value="false">
+<param name="ShowControls" value="true">
+<param name="ShowStatusBar" value="false">
+<param name="ShowDisplay" value="false">
+<embed type="application/x-mplayer2" src="mms://wma1.viastreaming.net/alingclub" 
+width="192" height="190" ShowControls="1" ShowStatusBar="0" ShowDisplay="0" autostart="0" />
+</object>
 
 </body>
 </html>
