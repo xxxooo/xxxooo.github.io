@@ -1,0 +1,224 @@
+.kikyo {
+  background-color: #6A4C9C !important;
+}
+
+.kikyo-lite {
+  color: #6A4C9C !important;
+  background-color: #F5EEFF !important;
+}
+
+a {
+  color: inherit;
+}
+
+.brand-logo {
+  margin: 0 12px;
+}
+
+.main-container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.nav-wrapper {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.nav-wrapper ul.main-menu li a {
+  font-size: 18px;
+}
+
+.nav-wrapper #nav-mobile {
+  margin-left: 240px;
+}
+
+.btn:not(.waves-light) {
+  background-color: #fff;
+  color: #212121;
+}
+
+.carousel.carousel-slider {
+  height: 672px;
+}
+
+.carousel-item {
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.carousel-teaser-wrapper {
+  margin: 500px auto 0 auto;
+  max-width: 80%;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-teaser-wrapper h6 {
+  max-width: 600px;
+  margin: auto;
+}
+
+.new-articles {
+  margin-top: 48px;
+  margin-bottom: 0;
+}
+
+.card .card-content {
+  position: relative;
+  text-align: center;
+  height: 92px;
+  padding: 18px 12px 8px 12px;
+}
+
+.card-content .card-title {
+  margin: 10px auto;
+  line-height: 1.4em !important;
+  font-size: 18px;
+}
+
+.section-head,
+.section-padding {
+  padding: 0 0.75rem;
+}
+
+.section-head {
+    position: relative;
+}
+
+.section-head h3 {
+  color: #6A4C9C;
+  border-bottom: 3px solid #6A4C9C;
+  font-size: 30px;
+  line-height: 20px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.section-head h3 a {
+  padding: 0 12px;
+  background-color: #FFF;
+}
+
+.section-head .read-more {
+  position: absolute;
+  top: 0;
+  right: 0.75rem;
+  color: #6A4C9C;
+}
+
+.card-category {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -18px;
+}
+
+.category .slider {
+  margin: 15px 0;
+}
+
+.slider .slides li .caption {
+  top: auto;
+  bottom: 5%;
+  left: 8%;
+  width: 80%;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.side-list {
+  margin: 0;
+}
+
+.side-list .list-item {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.side-list .list-item:hover {
+  background-color: #f5eeff;
+}
+
+.side-list .list-item a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.side-list .list-item a span {
+  color: #6A4C9C;
+  width: 24px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 9px;
+}
+
+.side-list .list-item a span::after {
+  content: '.';
+}
+
+footer .list-item {
+  font-size: 16px;
+  margin: 16px 4px;
+}
+
+.footer-padding {
+  padding: 48px 12px;
+}
+
+.footer-list {
+  max-width: 640px;
+  margin: auto;
+  color: #F5EEFF;
+  text-align: center;
+}
+
+.divider-line {
+  height: 2px;
+  width: 80%;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.icons {
+  background-size: 100%;
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.social-links .icons {
+  margin: 8px;
+}
+
+.social-facebook {
+  background-image: url(../img/svg/facebook-i.svg);
+}
+
+.social-twitter {
+  background-image: url(../img/svg/twitter-i.svg);
+}
+
+.social-google-plus {
+  background-image: url(../img/svg/google-plus-i.svg);
+}
+
+.social-line {
+  background-image: url(../img/svg/line-i.svg);
+}
+
+@media only screen and (min-width: 1280px) {
+  .carousel-item {
+    background-size: 100% auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .row .col.m4 {
+    padding: 0;
+  }
+}
