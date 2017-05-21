@@ -1,0 +1,361 @@
+/* ************ */
+/* 星空背景效果 */
+/* *********** */
+
+@-webkit-keyframes twinkle_one {
+    0% {opacity: 1;}
+	30% {opacity: .1;}
+	70% {opacity: .5;}
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes twinkle_one {
+    0% {opacity: 1;}
+	30% {opacity: .1;}
+	70% {opacity: .5;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes twinkle_one {
+    0% {opacity: 1;}
+	30% {opacity: .1;}
+	70% {opacity: .5;}
+	100% {opacity: 1;}
+}
+
+@keyframes twinkle_one {
+    0% {opacity: 1;}
+	30% {opacity: .1;}
+	70% {opacity: .5;}
+	100% {opacity: 1;}
+}
+
+@-webkit-keyframes twinkle_two {
+    0% {opacity: 1;}
+	25% {opacity: .4;}
+	80% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes twinkle_two {
+    0% {opacity: 1;}
+	25% {opacity: .4;}
+	80% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes twinkle_two {
+    0% {opacity: 1;}
+	25% {opacity: .4;}
+	80% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes twinkle_two {
+    0% {opacity: 1;}
+	25% {opacity: .4;}
+	80% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-webkit-keyframes twinkle_three {
+    0% {opacity: 1;}
+	30% {opacity: 0;}
+	40% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes twinkle_three {
+    0% {opacity: 1;}
+	30% {opacity: 0;}
+	40% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes twinkle_three {
+    0% {opacity: 1;}
+	30% {opacity: 0;}
+	40% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes twinkle_three {
+	0% {opacity: 1;}
+	30% {opacity: 0;}
+	40% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes clouds-fluttering-matrix {
+    from { transform: matrix(4, 0, 0, 4, -660, 384) }
+    to { transform: matrix(4, 0, 0, 4, 1980, 384) }
+}
+@-webkit-keyframes clouds-fluttering-matrix {
+    from { -webkit-transform: matrix(4, 0, 0, 4, -660, 384) }
+    to { -webkit-transform: matrix(4, 0, 0, 4, 1980, 384) }
+}
+@-moz-keyframes clouds-fluttering-matrix {
+    from { -moz-transform: matrix(4, 0, 0, 4, -660, 384) }
+    to { -moz-transform: matrix(4, 0, 0, 4, 1980, 384) }
+}
+
+@keyframes clouds-fluttering-bg-pos {
+    from { background-position: 0 0; }
+    to { background-position: 2640px 0; }
+}
+@-webkit-keyframes clouds-fluttering-bg-pos {
+    from { background-position: 0 0; }
+    to { background-position: 2640px 0; }
+}
+@-moz-keyframes clouds-fluttering-bg-pos {
+    from { background-position: 0 0; }
+    to { background-position: 2640px 0; }
+}
+
+.galaxy-stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    min-width: inherit;
+    overflow: hidden;
+    z-index: -3;
+}
+
+.galaxy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #001e6e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#001e6e, #0063a6);
+    background: -o-linear-gradient(#001e6e, #0063a6);
+    background: -moz-linear-gradient(#001e6e, #0063a6);
+    background: linear-gradient(#001e6e, #0063a6);
+}
+
+.clouds {
+    position: absolute;
+    width: 100%;
+    height: 1024px;
+    background: url(../img/clouds.png) repeat;
+    background-size: 2640px 1024px;
+    -moz-animation: clouds-fluttering-bg-pos 66s linear infinite;
+    -o-animation: clouds-fluttering-bg-pos 66s linear infinite;
+    -webkit-animation: clouds-fluttering-bg-pos 66s linear infinite;
+    animation: clouds-fluttering-bg-pos 66s linear infinite;
+}
+.clouds.trans-matrix {
+    width: 1320px;
+    height: 256px;
+    background-size: 660px 256px;
+    -moz-animation-name: clouds-fluttering-matrix;
+    -o-animation-name: clouds-fluttering-matrix;
+    -webkit-animation-name: clouds-fluttering-matrix;
+    animation-name: clouds-fluttering-matrix;
+}
+
+.galaxy .star {
+	position: absolute;
+	background-color: white;
+}
+
+.galaxy .star-m0 {
+    width: 1px;
+	height: 1px;
+	border-radius: 1px;
+	box-shadow: 0 0 1px 1px white;
+}
+.galaxy .star-m1 {
+	width: 2px;
+	height: 2px;
+	border-radius: 2px;
+	box-shadow: 0 0 1px 1px white;
+}
+.galaxy .star-m2 {
+	width: 3px;
+	height: 3px;
+	border-radius: 3px;
+    box-shadow: 0 0 2px 0px white;
+}
+.galaxy .star-m3 {
+	width: 4px;
+	height: 4px;
+	border-radius: 5px;
+	box-shadow: 0 0 2px 1px white;
+}
+.galaxy .star-m4 {
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 3px 0px white;
+}
+
+.galaxy .twinkle0 {
+    opacity: 0.6;
+}
+.galaxy .twinkle1 {
+    -webkit-animation: twinkle_one 3.3s infinite;
+	-moz-animation: twinkle_one 3.3s infinite;
+	-o-animation: twinkle_one 3.3s infinite;
+	animation: twinkle_one 3.3s infinite;
+}
+.galaxy .twinkle2 {
+    -webkit-animation: twinkle_two 17s infinite;
+	-moz-animation: twinkle_two 17s infinite;
+	-o-animation: twinkle_two 17s infinite;
+	animation: twinkle_two 17s infinite;
+}
+.galaxy .twinkle3 {
+    -webkit-animation: twinkle_three 11s infinite;
+	-moz-animation: twinkle_three 11s infinite;
+	-o-animation: twinkle_three 11s infinite;
+	animation: twinkle_three 11s infinite;
+}
+.galaxy .twinkle4 {
+    -webkit-animation: twinkle_two 7s infinite;
+	-moz-animation: twinkle_two 7s infinite;
+	-o-animation: twinkle_two 7s infinite;
+	animation: twinkle_two 7s infinite;
+}
+.galaxy.freeze .twinkle0,
+.galaxy.freeze .twinkle1,
+.galaxy.freeze .twinkle2,
+.galaxy.freeze .twinkle3,
+.galaxy.freeze .twinkle4 {
+    -webkit-animation: none !important;
+	-moz-animation: none !important;
+	-o-animation: none !important;
+	animation: none !important;
+}
+.clouds.freeze {
+    -webkit-animation: none !important;
+	-moz-animation: none !important;
+	-o-animation: none !important;
+	animation: none !important;
+}
+.clouds.trans-matrix.freeze {
+    width: 2640px;
+    height: 1024px;
+    background-size: 2640px 1024px;
+}
+
+/*
+/*
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    margin: 0 8px
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 32px;
+    border: 1px solid rgba(212, 212, 212, .75);
+    background-color: rgba(255, 255, 255, .5);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    border-radius: 50%;
+    background-color: #eee;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:after {
+    content: "OFF";
+    color: #d4d4d4;
+    line-height: 32px;
+    margin-left: 30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+input:checked + .slider {
+    background-color: rgba(0, 172, 255, .75);
+    border-color: #00acff;
+}
+
+input:checked + .slider:before {
+    color: #fff;
+    -webkit-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
+}
+input:checked + .slider:after {
+    content: "ON";
+    color: #f0f0f0;
+    margin-left: 8px;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 32px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*
+/*
+/*******/
+
+body {
+    font-family: 'Helvetica Neue';
+}
+
+.main {
+    margin: 18% auto;
+    text-align: center;
+}
+.main h1 {
+    font-size: 6rem;
+    font-weight: 100;
+    color: #d4d4d4;
+    text-shadow: 1px 1px 3px white, 2px 4px 12px rgba(0, 0, 0, .7), 0px 6px 24px rgba(0, 0, 0, .5);
+}
+.main p {
+    font-size: 2rem;
+    font-weight: 200;
+    color: #f0f0f0;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, .75);
+}
+.main table {
+    font-size: 1.25rem;
+    font-weight: 200;
+    color: #f0f0f0;
+    margin: auto;
+}
+.main table tr {
+    height: 3.75rem;
+    vertical-align: middle;
+    text-align: left;
+}
+.main table span {
+    font-size: 1.5rem;
+}
+.main table input {
+    cursor: pointer;
+}

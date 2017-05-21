@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:title" content="Galaxy Stars CSS Performance Test">
+    <meta property="og:description" content="Same visual effect but using different CSS animation.">
+    <meta property="og:image" content="./img/og_image.jpg">
+	<title>Galaxy Stars CSS Performance Test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/GalaxyStars.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/galaxy_stars_a1.css">
+</head>
+<body>
+	<div class="galaxy-stars">
+		<div class="galaxy"></div>
+		<div class="clouds"></div>
+	</div>
+
+	<div class="main">
+		<h1>Galaxy Stars</h1>
+		<p>CSS performance test</p>
+
+        <table>
+            <tr>
+                <td>
+                    <span>Stars twinkle</span>
+                </td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <div id="twinkleSwitch" class="slider"></div>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Cloud flutter</span>
+                </td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <div id="flutterSwitch" class="slider"></div>
+                    </label>
+                </td>
+				<td>
+					<input type="radio" name="animation" value="bg-pos" checked> background-position<br>
+  					<input type="radio" name="animation" value="trans-matrix"> transform: matrix
+                </td>
+            </tr>
+        </table>
+
+	</div>
+</body>
+</html>
