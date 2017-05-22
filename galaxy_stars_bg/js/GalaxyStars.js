@@ -10,10 +10,17 @@ $().ready(function () {
         $galaxy.empty();
         for (var i = 0; i < starNumLimit; i++) {
             var starType = Math.floor(Math.random() * Math.random() * 5),
-                twinkleType = Math.floor(Math.random() * 5);
+                twinkleType = Math.floor(Math.random() * 4),
+                delaySec = Math.random() * -8 + 's';
 
             $('<div/>',{
-                class: 'star star-m'+ starType +' twinkle'+ twinkleType
+                class: 'star star-m'+ starType +' twinkle'+ twinkleType,
+                css: {
+                  '-webkit-animation-delay': delaySec,
+                  '-moz-animation-delay': delaySec,
+                  '-o-animation-delay': delaySec,
+                  'animation-delay': delaySec
+                }
             }).appendTo($galaxy).css({
                 top: galaxyHeight * Math.random(),
                 left: galaxyWidth * Math.random()

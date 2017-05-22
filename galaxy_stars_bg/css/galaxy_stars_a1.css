@@ -197,10 +197,10 @@
     opacity: 0.6;
 }
 .galaxy .twinkle1 {
-    -webkit-animation: twinkle_one 3.3s infinite;
-	-moz-animation: twinkle_one 3.3s infinite;
-	-o-animation: twinkle_one 3.3s infinite;
-	animation: twinkle_one 3.3s infinite;
+    -webkit-animation: twinkle_one 3s infinite;
+	-moz-animation: twinkle_one 3s infinite;
+	-o-animation: twinkle_one 3s infinite;
+	animation: twinkle_one 3s infinite;
 }
 .galaxy .twinkle2 {
     -webkit-animation: twinkle_two 17s infinite;
@@ -209,22 +209,17 @@
 	animation: twinkle_two 17s infinite;
 }
 .galaxy .twinkle3 {
-    -webkit-animation: twinkle_three 11s infinite;
-	-moz-animation: twinkle_three 11s infinite;
-	-o-animation: twinkle_three 11s infinite;
-	animation: twinkle_three 11s infinite;
+    -webkit-animation: twinkle_three 7s infinite;
+	-moz-animation: twinkle_three 7s infinite;
+	-o-animation: twinkle_three 7s infinite;
+	animation: twinkle_three 7s infinite;
 }
-.galaxy .twinkle4 {
-    -webkit-animation: twinkle_two 7s infinite;
-	-moz-animation: twinkle_two 7s infinite;
-	-o-animation: twinkle_two 7s infinite;
-	animation: twinkle_two 7s infinite;
-}
+
 .galaxy.freeze .twinkle0,
 .galaxy.freeze .twinkle1,
 .galaxy.freeze .twinkle2,
-.galaxy.freeze .twinkle3,
-.galaxy.freeze .twinkle4 {
+.galaxy.freeze .twinkle3 {
+  opacity: 0.5 !important;
     -webkit-animation: none !important;
 	-moz-animation: none !important;
 	-o-animation: none !important;
