@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.1/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuefire/1.4.3/vuefire.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>My Page Title</title>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <div class="page-header">
+        <h1>Vue.js 2 & Firebase example</h1>
+      </div>
+      <div v-if="auth.currentUser">
+        <div v-if="auth.currentUser">
+          <button class="mdl-button mdl-js-button" @click="signOut">Sign Out</button>
+        </div>
+        <div class="mdl-card card-wide mdl-shadow--4dp">
+          <div>
+            <h3 class="mdl-card__title-text">Add New Books</h3>
+          </div>
+          <div class="panel-body">
+            <form class="mdl-grid" id="form" v-on:submit.prevent="addBook">
+              <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield">
+                <label class="mdl-textfield__label" for="bookTitle">Title:</label>
+                <input class="mdl-textfield__input" id="bookTitle" type="text" v-model="newBook.title">
+              </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield">
+                <label class="mdl-textfield__label" for="bookAuthor">Author:</label>
+                <input class="mdl-textfield__input" id="bookAuthor" type="text" v-model="newBook.author">
+              </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield">
+                <label class="mdl-textfield__label" for="bookUrl">Url:</label>
+                <input class="mdl-textfield__input" id="bookUrl" type="text" v-model="newBook.url">
+              </div>
+              <input class="mdl-button mdl-js-button" type="submit" value="Add Book">
+            </form>
+          </div>
+        </div>
+        <div class="mdl-card card-wide mdl-shadow--4dp">
+          <div>
+            <h3 class="mdl-card__title-text">Book List</h3>
+          </div>
+          <div class="panel-body">
+            <table class="mdl-data-table mdl-js-data-table">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">Title</th>
+                  <th class="mdl-data-table__cell--non-numeric">Author</th>
+                  <th class="mdl-data-table__cell--non-numeric">Url</th>
+                  <th class="mdl-data-table__cell--non-numeric"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="book in books">
+                  <td class="mdl-data-table__cell--non-numeric"><a v-bind:href="book.url">{{book.title}}</a></td>
+                  <td class="mdl-data-table__cell--non-numeric">{{book.author}}</td>
+                  <td class="mdl-data-table__cell--non-numeric">{{book.url}}</td>
+                  <td class="mdl-data-table__cell--non-numeric"><a><i class="material-icons" v-on:click="removeBook(book)">delete</i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="mdl-card mdl-shadow--4dp" v-else>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" id="email" type="text" v-model="user.email">
+          <label class="mdl-textfield__label" for="email">email</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" id="password" type="password" v-model="user.pass">
+          <label class="mdl-textfield__label" for="password">password</label>
+        </div>
+        <div class="mdl-color-text--pink-A400" v-text="message"></div>
+        <div id="signIn">
+          <button class="mdl-button mdl-js-button" @click="signIn">Sign In</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container" id="app2">
+      <h2>Vue-resource from S3</h2>
+      <div>
+        <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield">
+          <label class="mdl-textfield__label" for="s3Url">S3 Url:</label>
+          <input class="mdl-textfield__input" id="s3Url" type="text" v-model="s3Url">
+        </div>
+        <div class="mdl-color-text--pink-A400" v-text="message"></div>
+        <button class="mdl-button mdl-js-button" @click="loadFromS3">Load from S3</button>
+      </div>
+      <table class="mdl-data-table mdl-js-data-table" v-if="cities">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric" v-for="(value, key) in cities[0]" v-text="key"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="city in cities">
+            <td class="mdl-data-table__cell--non-numeric" v-for="value in city" v-text="value"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

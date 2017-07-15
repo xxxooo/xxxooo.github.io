@@ -1,0 +1,23 @@
+/* css style for layout.pug */
+.container {
+  width: 70%;
+  max-width: 960px;
+  margin: auto;
+}
+.page-header {
+  text-align: center;
+}
+
+.mdl-card {
+  margin: 2rem auto;
+  padding: 2rem;
+}
+.mdl-card.card-wide {
+  width: 80%;
+}
+table {
+  width: 100%;
+}
+td > a {
+  cursor: pointer;
+}
